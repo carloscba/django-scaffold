@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'apps.profiles',
+    'apps.users',
 ]
 
 MIDDLEWARE = [
@@ -122,3 +123,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 AUTH_USER_MODEL = 'profiles.Profile'
+
+REST_FRAMEWORK = {
+    'PAGE_SIZE': 20
+}
