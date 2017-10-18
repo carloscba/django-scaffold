@@ -5,6 +5,6 @@ from django.db import models
 class Users(models.Model):
     displayName = models.CharField(max_length=255, unique = True)
     email = models.EmailField(unique = True, blank = True)
-    photoURL =  models.CharField(max_length=255)
+    photoURL = models.URLField()
     uid =  models.CharField(max_length=255, unique = True)
 
