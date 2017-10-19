@@ -6,10 +6,12 @@ from rest_framework.routers import DefaultRouter
 
 from apps.profiles.views import *
 from apps.users.views import *
+from apps.altarcitos.views import *
 
 
 router = DefaultRouter()
 
+router.register('altarcito', AltarcitosViewSet)
 router.register('profile', ProfileViewSet)
 router.register('user', UsersViewSet)
 router.register('login', LoginViewSet, base_name='login')
